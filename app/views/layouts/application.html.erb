@@ -8,14 +8,15 @@
   <%= stylesheet_link_tag 'scaffold' %>
 
   <!-- <title>Incorporated 1.0 by FreeCSSTemplates.org</title> -->
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
+
 </head>
 
 <body>
 <div id="header">
 	<div id="logo">
 		<h1><a href="#">ComplexIT</a></h1>
-		<p>Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+		<!-- <p>Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p> -->
 	</div>
 	<!-- end #logo -->
 	<div id="menu">
@@ -25,6 +26,7 @@
 			<li><a href="#">Products</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="/contact_pages">Contact Us</a></li>
+			<li><a href="/credits">Credits</a></li>
 		</ul>
 	</div>
 	<!-- end #menu -->
@@ -112,7 +114,21 @@
 </div>
 <!-- end #page -->
 <div id="footer">
-	<p>&copy; 2008. All Rights Reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+
+
+
+
+	<p>
+	  <li>  
+	    <center>
+	      Copyright (c) <%=Time.now.strftime("%Y") %>  ACMMTPA. All rights reserved.  Developed by Charles Magid.  Developed with all open source tools
+	    </center>
+	  </li>
+	</p>
+
+
+
+
 </div>
 <!-- end #footer -->
 </body>
