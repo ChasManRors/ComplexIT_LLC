@@ -1,0 +1,11 @@
+How this site was made
+
+$ rails complexit
+$ cd complexit/
+$ cp ../tracker/.gitignore .
+$ git init
+$ git add .
+$ git commit -m'rails checkin'
+
+$ script/generate scaffold home_page title:string body:text
+$ rake db:migrate
