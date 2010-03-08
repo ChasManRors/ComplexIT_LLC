@@ -23,8 +23,9 @@
 		<ul>
 			<li class="active"><a href="/home_pages">Home</a></li>
 			<li><a href="/about_us">About Us</a></li>
-			<li><a href="#">Products</a></li>
-			<li><a href="#">Services</a></li>
+			<!-- <li><a href="#">Products</a></li>q -->
+
+			<li><a href="/services_pages">Services</a></li> 
 			<li><a href="/contact_pages">Contact Us</a></li>
 			<li><a href="/credits">Credits</a></li>
 		</ul>
@@ -83,36 +84,24 @@
 					</form>
 				</li>
 				<li>
-					<h2>Services</h2>
-					<ul>
-						<li><a href="#">MAC & PC</a></li>
-						<li><a href="#">Consulting</a></li>
-						<li><a href="#">Training</a></li>
-						<li><a href="#">Repairs</a></li>
-						<li><a href="#">Installations</a></li>
-						<li><a href="#">Software</a></li>
-						<li><a href="#">Hardware</a></li>
-						<li><a href="#">iPhone</a></li>
-						<li><a href="#">iPods</a></li>
-						<li><a href="#">Blackberries/SmartPhones</a></li>
-						<li><a href="#">Virus & Spyware removal</a></li>
-						<li><a href="#">Disk Optimization</a></li>
-						<li><a href="#">Computer tune-up/maintenance</a></li>
-						<li><a href="#">Backup Strategies</a></li>
-					</ul>
+				  <%= yield :menu_data %>
 				</li>
 				<li>
-					<h2>Volutpat Dolore</h2>
-					<ul>
-						<li><a href="#">Nec metus sed donec</a></li>
-						<li><a href="#">Magna lacus bibendum mauris</a></li>
-						<li><a href="#">Velit semper nisi molestie</a></li>
-						<li><a href="#">Eget tempor eget nonummy</a></li>
-						<li><a href="#">Nec metus sed donec</a></li>
-						<li><a href="#">Magna lacus bibendum mauris</a></li>
-						<li><a href="#">Velit semper nisi molestie</a></li>
-					</ul>
+				  <%= yield :menu_data_too %>
+				
 				</li>
+				<!-- <li> -->
+					<!-- <h2>Volutpat Dolore</h2> -->
+					<!-- <ul> -->
+					<!-- 	<li><a href="#">Nec metus sed donec</a></li> -->
+					<!-- 	<li><a href="#">Magna lacus bibendum mauris</a></li> -->
+					<!-- 	<li><a href="#">Velit semper nisi molestie</a></li> -->
+					<!-- 	<li><a href="#">Eget tempor eget nonummy</a></li> -->
+					<!-- 	<li><a href="#">Nec metus sed donec</a></li> -->
+					<!-- 	<li><a href="#">Magna lacus bibendum mauris</a></li> -->
+					<!-- 	<li><a href="#">Velit semper nisi molestie</a></li> -->
+					<!-- </ul> -->
+				<!-- </li> -->
 			</ul>
 		</div>
 		<div id="sidebar-bgbtm"></div>
@@ -128,7 +117,7 @@
 	<p>
 	  <li>  
 	    <center>
-	      Copyright (c) <%=Time.now.strftime("%Y") %>  ACMMCA. All rights reserved.  Developed by Charles Magid.  Developed with all open source tools
+	      Copyright (c) <%=Time.now.strftime("%Y") %>  ACMMCA. All rights reserved.  Developed by <a href="http://sites.google.com/site/charlesmagidrubyonrailsexprenc/"> Charles Magid. </a>  Developed with all open source tools
 	    </center>
 	  </li>
 	</p>
