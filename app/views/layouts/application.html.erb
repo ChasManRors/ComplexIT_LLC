@@ -1,132 +1,79 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>HomePages: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HomePages: <%= controller.action_name %></title>
+    <%= stylesheet_link_tag 'scaffold' %>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
+  </head>
 
-  <!-- <title>Incorporated 1.0 by FreeCSSTemplates.org</title> -->
-  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
+  <body>
+    <div id="header">
+      <div id="logo">
+	<h1><a href="#">ComplexIT</a></h1>
+      </div>
+      <!-- end #logo -->
+      <div id="menu">
+	<ul>
+	  <li class="active"><a href="/home_pages">Home</a></li>
+	  <li><a href="/about_us">About Us</a></li>
+	  <!-- <li><a href="#">Products</a></li>q -->
+	  <li><a href="/services_pages">Services</a></li> 
+	  <li><a href="/contact_pages">Contact Us</a></li>
+	  <li><a href="/credits">Credits</a></li>
+	</ul>
+      </div>
+      <!-- end #menu -->
+    </div>
+    <!-- end #header -->
+    <div id="page">
+      <div id="content">
 
-</head>
+	<!-- This is to include the ruby on rails real stuff -->
+	<p style="color: green"><%= flash[:notice] %></p>
+	<%= yield %>
 
-<body>
-<div id="header">
-	<div id="logo">
-		<h1><a href="#">ComplexIT</a></h1>
-		<!-- <p>Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p> -->
+      </div>
+      <!-- end #content -->
+      <div id="sidebar">
+	<div id="sidebar-bgtop"></div>
+	<div id="sidebar-content">
+	  <ul>
+	    <li id="search">
+	      <h2>Search</h2>
+	      <form method="get" action="">
+		<fieldset>
+		  <input type="text" id="s" name="s" value="" />
+		  <input type="submit" id="x" value="Search" />
+		</fieldset>
+	      </form>
+	    </li>
+	    <li>
+	      <%= yield :menu_data %>
+	    </li>
+	    <li>
+	      <%= yield :menu_data_too %>
+	      
+	    </li>
+	  </ul>
 	</div>
-	<!-- end #logo -->
-	<div id="menu">
-		<ul>
-			<li class="active"><a href="/home_pages">Home</a></li>
-			<li><a href="/about_us">About Us</a></li>
-			<!-- <li><a href="#">Products</a></li>q -->
+	<div id="sidebar-bgbtm"></div>
+      </div>
+      <!-- end #sidebar -->
+    </div>
+    <!-- end #page -->
+    <div id="footer">
 
-			<li><a href="/services_pages">Services</a></li> 
-			<li><a href="/contact_pages">Contact Us</a></li>
-			<li><a href="/credits">Credits</a></li>
-		</ul>
-	</div>
-	<!-- end #menu -->
-</div>
-<!-- end #header -->
-<div id="page">
-	<div id="content">
+      <p>
+	<li>  
+	  <center>
+	    Copyright (c) <%=Time.now.strftime("%Y") %>  ACMMCA. All rights reserved.  Developed by <a href="http://sites.google.com/site/charlesmagidrubyonrailsexprenc/"> Charles Magid. </a>  Developed with all open source tools
+	  </center>
+	</li>
+      </p>
 
-<!-- This is to include the ruby on rails real stuff -->
-<p style="color: green"><%= flash[:notice] %></p>
-<%= yield %>
-
-
-		<!-- <div class="post"> -->
-		<!-- 	<h1 class="title">Welcome to our website </h1> -->
-		<!-- 	<p class="byline"><small>Posted by FreeCssTemplates</small></p> -->
-		<!-- 	<div class="entry"> -->
-		<!-- 		<p><strong>Incorporated 1.0</strong> is a free template from <a href="http://www.freecsstemplates.org/">Free CSS Templates</a> released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>. You're free to use this template for both commercial or personal use. I only ask that you link back to <a href="http://www.freecsstemplates.org/">my site</a> in some way. Enjoy :)</p> -->
-		<!-- 	</div> -->
-		<!-- 	<div class="meta"> -->
-		<!-- 		<p class="links"><a href="#" class="comments">Comments (32)</a> &nbsp;&bull;&nbsp;&nbsp; <a href="#" class="more">Read full post &raquo;</a></p> -->
-		<!-- 	</div> -->
-		<!-- </div> -->
-
-		<!-- <div class="post"> -->
-		<!-- 	<h2 class="title">Lorem Ipsum Dolor Volutpat</h2> -->
-		<!-- 	<p class="byline"><small>Posted by FreeCssTemplates</small></p> -->
-		<!-- 	<div class="entry"> -->
-		<!-- 		<p>Curabitur tellus. Phasellus tellus turpis, iaculis in, faucibus lobortis, posuere in, lorem. Donec a ante. Donec neque purus, adipiscing id, eleifend a, cursus vel, odio. Vivamus varius justo sit amet leo. Morbi sed libero. Vestibulum blandit augue at mi. Praesent fermentum lectus eget diam. Nam cursus, orci sit amet porttitor iaculis, ipsum massa aliquet nulla, non elementum mi elit a mauris.</p> -->
-		<!-- 		<ul> -->
-		<!-- 			<li><a href="#">Magna lacus bibendum mauris</a></li> -->
-		<!-- 			<li><a href="#">Velit semper nisi molestie</a></li> -->
-		<!-- 			<li><a href="#">Magna lacus bibendum mauris</a></li> -->
-		<!-- 			<li><a href="#">Velit semper nisi molestie</a></li> -->
-		<!-- 		</ul> -->
-		<!-- 	</div> -->
-		<!-- 	<div class="meta"> -->
-		<!-- 		<p class="links"><a href="#" class="comments">Comments (32)</a> &nbsp;&bull;&nbsp;&nbsp; <a href="#" class="more">Read full post &raquo;</a></p> -->
-		<!-- 	</div> -->
-		<!-- </div> -->
-	</div>
-	<!-- end #content -->
-	<div id="sidebar">
-		<div id="sidebar-bgtop"></div>
-		<div id="sidebar-content">
-			<ul>
-				<li id="search">
-					<h2>Search</h2>
-					<form method="get" action="">
-						<fieldset>
-						<input type="text" id="s" name="s" value="" />
-						<input type="submit" id="x" value="Search" />
-						</fieldset>
-					</form>
-				</li>
-				<li>
-				  <%= yield :menu_data %>
-				</li>
-				<li>
-				  <%= yield :menu_data_too %>
-				
-				</li>
-				<!-- <li> -->
-					<!-- <h2>Volutpat Dolore</h2> -->
-					<!-- <ul> -->
-					<!-- 	<li><a href="#">Nec metus sed donec</a></li> -->
-					<!-- 	<li><a href="#">Magna lacus bibendum mauris</a></li> -->
-					<!-- 	<li><a href="#">Velit semper nisi molestie</a></li> -->
-					<!-- 	<li><a href="#">Eget tempor eget nonummy</a></li> -->
-					<!-- 	<li><a href="#">Nec metus sed donec</a></li> -->
-					<!-- 	<li><a href="#">Magna lacus bibendum mauris</a></li> -->
-					<!-- 	<li><a href="#">Velit semper nisi molestie</a></li> -->
-					<!-- </ul> -->
-				<!-- </li> -->
-			</ul>
-		</div>
-		<div id="sidebar-bgbtm"></div>
-	</div>
-	<!-- end #sidebar -->
-</div>
-<!-- end #page -->
-<div id="footer">
-
-
-
-
-	<p>
-	  <li>  
-	    <center>
-	      Copyright (c) <%=Time.now.strftime("%Y") %>  ACMMCA. All rights reserved.  Developed by <a href="http://sites.google.com/site/charlesmagidrubyonrailsexprenc/"> Charles Magid. </a>  Developed with all open source tools
-	    </center>
-	  </li>
-	</p>
-
-
-
-
-</div>
-<!-- end #footer -->
-</body>
+    </div>
+    <!-- end #footer -->
+  </body>
 </html>
 
