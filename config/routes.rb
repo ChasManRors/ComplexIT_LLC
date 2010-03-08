@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :about_us
+
   map.resources :credits
 
   map.resources :contact_pages
